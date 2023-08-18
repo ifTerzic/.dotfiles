@@ -1,0 +1,5 @@
+fishd.*
+fish_history
+generated_completions
+fish_read_history
+functions/fish_prompt.fish
