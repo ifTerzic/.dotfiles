@@ -53,13 +53,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-# bindsym $mod+d exec --no-startup-id dmenu_run
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+# start rofi (a program launcher)
+bindsym Mod1+space exec "rofi -show drun"
 
 # change focus
 bindsym $mod+j focus left
@@ -182,14 +177,13 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
-#         status_command i3status
-# }
-
-#### Replace i3bar with Polybar
+# Replace i3bar with Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Set background image on start of i3
+exec_always feh --bg-fill $HOME/Pictures/wallhaven-mdjrqy.jpg
+
+# Dracula color theme for i3
 # class                 border  bground text    indicator child_border
 client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
 client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
@@ -199,4 +193,3 @@ client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
 client.background       #F8F8F2
 
-bindsym Mod1+space exec "rofi -show drun"
