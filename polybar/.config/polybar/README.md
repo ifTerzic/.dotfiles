@@ -1,0 +1,2 @@
+### Requirements
+- [ ] `polybar-vpn-controller`

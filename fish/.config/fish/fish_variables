@@ -51,7 +51,7 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:555\x1eyellow
 SETUVAR fish_pager_color_prefix:cyan
 SETUVAR fish_pager_color_progress:cyan
-SETUVAR fish_user_paths:/home/ivan/\x2edotfiles/bin/\x2elocal/scripts\x1e/home/ivan/\x2econfig/emacs/bin\x1e/home/ivan/\x2elocal/bin\x1e/home/ivan/\x2ecargo/bin
+SETUVAR fish_user_paths:/usr/bin\x1e/home/ivan/\x2edotfiles/bin/\x2elocal/scripts\x1e/home/ivan/\x2econfig/emacs/bin\x1e/home/ivan/\x2elocal/bin\x1e/home/ivan/\x2ecargo/bin
 SETUVAR sponge_allow_previously_successful:true
 SETUVAR sponge_delay:2
 SETUVAR sponge_filters:sponge_filter_failed\x1esponge_filter_matched
