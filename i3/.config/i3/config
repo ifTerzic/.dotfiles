@@ -192,6 +192,3 @@ client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
 client.background       #F8F8F2
-
-# Add i3-alternatig-layouts autostart
-exec --no-startup-id /home/ivan/.config/i3-alternating-layout/alternating_layouts.py

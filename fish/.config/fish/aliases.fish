@@ -27,3 +27,6 @@ alias gcpa="git cherry-pick --abort"
 alias gbg="git bisect good"
 alias gbb="git bisect bad"
 
+# tmux
+alias tmls="tmux ls"
+alias tma="tmux a"
