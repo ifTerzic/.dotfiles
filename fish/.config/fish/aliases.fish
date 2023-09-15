@@ -30,3 +30,7 @@ alias gbb="git bisect bad"
 # tmux
 alias tmls="tmux ls"
 alias tma="tmux a"
+
+# utilities
+alias cp="cp -i" # confirm before overwriting something
+alias grep="grep --colour=auto"
