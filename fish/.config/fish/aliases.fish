@@ -34,3 +34,4 @@ alias tma="tmux a"
 # utilities
 alias cp="cp -i" # confirm before overwriting something
 alias grep="grep --colour=auto"
+alias cal="ncal -b"
