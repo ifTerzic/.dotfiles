@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.2',
         -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { {'nvim-lua/plenary.nvim'} },
     }
     use 'Mofiqul/dracula.nvim'
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -62,6 +62,15 @@ return require('packer').startup(function(use)
 
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
-    end}
+    end},
+    use {
+        "imNel/monorepo.nvim",
+        config = function()
+            require("monorepo").setup({
+                -- Your config here!
+            })
+        end,
+        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+    },
 }
 end)
