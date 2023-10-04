@@ -11,6 +11,10 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.2',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} },
+        config = function()
+            require("telescope").setup({
+            })
+        end
     }
     use 'Mofiqul/dracula.nvim'
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -44,7 +48,12 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     },
-    use { 'numToStr/comment.nvim' },
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    },
     use {
         'folke/todo-comments.nvim',
         dependencies = { "nvim-lua/plenary.nvim" },
@@ -72,5 +81,6 @@ return require('packer').startup(function(use)
         end,
         dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
     },
+    use {"nvim-telescope/telescope-project.nvim"}
 }
 end)
