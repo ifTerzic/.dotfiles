@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
             })
         end
     }
-    use 'Mofiqul/dracula.nvim'
+    use "folke/tokyonight.nvim"
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('theprimeagen/harpoon')
     use {
