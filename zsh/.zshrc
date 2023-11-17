@@ -3,8 +3,8 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
+source ~/znap/znap.zsh  # Start Znap
+# Set namu of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
@@ -87,6 +87,7 @@ plugins=(
     web-search
     zsh-autosuggestions
     zsh-completions
+    # zsh-autocomplete
 )
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
@@ -106,6 +107,7 @@ else
 fi
 
 eval $(thefuck --alias)
+zstyle ':autocomplete:*' default-context history-incremental-search-backward
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -156,17 +158,11 @@ alias grep="grep --colour=auto"
 alias cal="ncal -b"
 
 
-# FUNCTIONS
-function tmux_sessionizer() {
-    echo "HELLO WORLD"
-}
-
 # PATH adds
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$HOME/.local/scripts:$PATH
 # KEYBINDS
 bindkey -s ^f "tmux-sessionizer\n"
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ivan/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -181,4 +177,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
+# ZNAP Plugins
+znap source marlonrichert/zsh-autocomplete

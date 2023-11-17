@@ -11,9 +11,21 @@ config you want to add sucks!
 [GNU stow](https://www.gnu.org/software/stow/)
 
 ### Prerequisites
-```
+```console
 git
 stow
+```
+
+### Requirements
+```console
+zsh>=5.8.1
+oh-my-zsh
+znap
+nvim>=0.9.0
+i3-wm
+polybar
+rofi
+tmux
 ```
 
 ### Installation
