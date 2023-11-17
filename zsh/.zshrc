@@ -179,3 +179,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 # ZNAP Plugins
 znap source marlonrichert/zsh-autocomplete
+zstyle ':autocomplete:*' delay 1.1  # seconds (float)
