@@ -83,7 +83,6 @@ plugins=(
     z
     sudo
     node
-    vi-mode
     web-search
 )
 source $ZSH/oh-my-zsh.sh
