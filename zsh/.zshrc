@@ -85,11 +85,7 @@ plugins=(
     node
     vi-mode
     web-search
-    zsh-autosuggestions
-    zsh-completions
-    # zsh-autocomplete
 )
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -165,18 +161,15 @@ export PATH=$HOME/.local/scripts:$PATH
 bindkey -s ^f "tmux-sessionizer\n"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ivan/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/ivan/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/ivan/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/ivan/anaconda3/bin:$PATH"
+        export PATH="$HOME/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-# ZNAP Plugins
-znap source marlonrichert/zsh-autocomplete
-zstyle ':autocomplete:*' delay 1.1  # seconds (float)
