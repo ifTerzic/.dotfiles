@@ -98,8 +98,14 @@ plugins=(
     web-search
     zsh-autosuggestions
 )
-source $ZSH/oh-my-zsh.sh
+# File sources
+if test -f "$ZSH/oh-my-zsh.sh"; then 
+    source $ZSH/oh-my-zsh.sh
+fi$HOME/.cargo/env
 
+if test -f "$HOME/.cargo/env"; then 
+    source $HOME/.cargo/env
+fi
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -130,7 +136,7 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias dotconfig="nvim ~/.dotfiles"
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
-alias ls='ls --color=auto'
+alias ls='ls --color -h --group-directories-first'
 
 # vim alias
 alias vim=nvim
@@ -165,12 +171,15 @@ alias cp="cp -i" # confirm before overwriting something
 alias grep="grep --colour=auto"
 alias cal="ncal -b"
 
+# temporary
+alias todo="nvim ~/dev/hatespeech-detection-NLP/TODO.md"
 
 # PATH adds
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$HOME/.local/scripts:$PATH
 # KEYBINDS
 bindkey -s ^f "tmux-sessionizer\n"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('$HOME/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
