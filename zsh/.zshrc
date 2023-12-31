@@ -101,7 +101,7 @@ plugins=(
 # File sources
 if test -f "$ZSH/oh-my-zsh.sh"; then 
     source $ZSH/oh-my-zsh.sh
-fi$HOME/.cargo/env
+fi
 
 if test -f "$HOME/.cargo/env"; then 
     source $HOME/.cargo/env
