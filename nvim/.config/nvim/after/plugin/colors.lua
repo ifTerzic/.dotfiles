@@ -1,6 +1,6 @@
 local has = vim.fn.has
 function ColorMyPencils(color)
-	color = color or "tokyonight"
+	color = color or "gruber-darker"
 	vim.cmd.colorscheme(color)
 
     if not  has "macunix" then
