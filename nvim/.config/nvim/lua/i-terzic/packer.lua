@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
             })
         end
     }
-    use {'thimc/gruber-darker.nvim'}
+    use {'navarasu/onedark.nvim'} -- Colortheme
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('theprimeagen/harpoon')
     use {

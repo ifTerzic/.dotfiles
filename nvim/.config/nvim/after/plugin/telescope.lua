@@ -10,6 +10,9 @@ require('telescope').setup {
             additional_args = function()
                 return {"--hidden"}
             end
+        },
+        git_files = {
+            use_git_root = false
         }
     },
 }
