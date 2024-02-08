@@ -12,7 +12,9 @@ require('telescope').setup {
             end
         },
         git_files = {
-            use_git_root = false
+            use_git_root = false,
+            show_untracked = true
+
         }
     },
 }
