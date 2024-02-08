@@ -81,6 +81,7 @@ return require('packer').startup(function(use)
         end,
         dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
     },
-    use {"nvim-telescope/telescope-project.nvim"}
+    use {"nvim-telescope/telescope-project.nvim"},
+    use {"paretje/nvim-man"}
 }
 end)
