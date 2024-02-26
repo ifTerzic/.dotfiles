@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
             })
         end
     }
-    use {'navarasu/onedark.nvim'} -- Colortheme
+    use {'navarasu/onedark.nvim'} -- colortheme
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('theprimeagen/harpoon')
     use {
@@ -54,6 +54,21 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     },
+    use{
+        "ej-shafran/compile-mode.nvim",
+        branch = "latest",
+        -- or a specific version:
+        -- tag = "v2.0.0",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            { "m00qek/baleia.nvim", tag = "v1.3.0" },
+         },
+        opts = {
+            -- you can disable colors by uncommenting this line
+            no_baleia_support = true,
+            default_command = "npm run build"
+        }
+    },
     use {
         'folke/todo-comments.nvim',
         dependencies = { "nvim-lua/plenary.nvim" },
@@ -72,15 +87,6 @@ return require('packer').startup(function(use)
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
     end},
-    use {
-        "imNel/monorepo.nvim",
-        config = function()
-            require("monorepo").setup({
-                -- Your config here!
-            })
-        end,
-        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-    },
     use {"nvim-telescope/telescope-project.nvim"},
     use {"paretje/nvim-man"}
 }
