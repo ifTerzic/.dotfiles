@@ -88,6 +88,12 @@ return require('packer').startup(function(use)
         require("toggleterm").setup()
     end},
     use {"nvim-telescope/telescope-project.nvim"},
-    use {"paretje/nvim-man"}
+    use {"paretje/nvim-man"},
+    use({
+        "stevearc/conform.nvim",
+        config = function()
+            require("conform").setup()
+        end,
+    })
 }
 end)
