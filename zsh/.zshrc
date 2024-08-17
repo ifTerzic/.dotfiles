@@ -97,6 +97,7 @@ plugins=(
     node
     web-search
     zsh-autosuggestions
+    poetry
 )
 # File sources
 if test -f "$ZSH/oh-my-zsh.sh"; then 
@@ -136,7 +137,7 @@ alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias dotconfig="nvim ~/.dotfiles"
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
-alias ls='ls --color -h --group-directories-first'
+alias ls='ls --color -h'
 
 # vim alias
 alias vim=nvim
