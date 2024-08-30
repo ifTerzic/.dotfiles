@@ -21,6 +21,7 @@ config.window_background_image_hsb = {
   hue = 1.0,
   saturation = 0.7,
 }
+config.window_close_confirmation = 'AlwaysPrompt'
 
 -- and finally, return the configuration to wezterm
 return config
