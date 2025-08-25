@@ -1,7 +1,6 @@
 return {
 	"ej-shafran/compile-mode.nvim",
-	branch = "latest",
-	-- or a specific version:
+	tag = "v5.4.0", -- or a specific version:
 	-- tag = "v4.0.0"
 	dependencies = {
 		"nvim-lua/plenary.nvim",
@@ -9,7 +8,7 @@ return {
 		-- compilation output, add:
 		{ "m00qek/baleia.nvim", tag = "v1.3.0" },
 	},
-	config = function(args)
+	config = function()
 		---@type CompileModeOpts
 		vim.g.compile_mode = {
 			-- to add ANSI escape code support, add:
@@ -36,4 +35,5 @@ return {
 		vim.keymap.set("n", "<M-r>", "<CMD>Recompile<CR>")
 	end,
 	lazy = false,
+	priority = 10,
 }

@@ -1,14 +1,14 @@
 function ColorMyPencils(color)
-	color = color or "onedark"
+	color = color or "nord"
 	vim.cmd.colorscheme(color)
 end
 
 return {
-	{
-		"navarasu/onedark.nvim",
-		-- "blazkowolf/gruber-darker.nvim",
-		config = function()
-			ColorMyPencils()
-		end,
-	},
+	"shaunsingh/nord.nvim",
+	-- "navarasu/onedark.nvim",
+	-- "blazkowolf/gruber-darker.nvim",
+	config = function()
+		ColorMyPencils()
+	end,
+	priority = 2,
 }

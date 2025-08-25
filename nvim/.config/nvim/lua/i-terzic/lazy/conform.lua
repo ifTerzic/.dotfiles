@@ -25,6 +25,7 @@ return {
 			typescript = { "prettierd", "prettier", stop_after_first = true },
 			c = { "clang-format" },
 			vue = { "prettierd", "prettier" },
+      rust = { "rustfmt" }
 		},
 		-- Set default options
 		default_format_opts = {
