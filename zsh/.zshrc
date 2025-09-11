@@ -132,9 +132,9 @@ zstyle ':autocomplete:*' default-context history-incremental-search-backward
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="nvim ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias dotconfig="nvim ~/.dotfiles"
+alias zshconfig="$EDITOR ~/.zshrc"
+alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
+alias dotconfig="$EDITOR ~/.dotfiles"
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias ls='ls --color -h'
@@ -176,11 +176,12 @@ alias grep="grep --colour=auto"
 alias cal="ncal -b"
 
 # temporary
-alias todo="nvim ~/dev/hatespeech-detection-NLP/TODO.md"
+alias todo="$EDITOR ~/dev/hatespeech-detection-NLP/TODO.md"
 
 # PATH adds
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$HOME/.local/scripts:$PATH
+export PATH=$PATH:$HOME/opt/software/go/bin
 # KEYBINDS
 bindkey -s ^f "tmux-sessionizer\n"
 
