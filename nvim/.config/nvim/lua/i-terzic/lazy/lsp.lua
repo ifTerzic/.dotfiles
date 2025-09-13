@@ -30,7 +30,9 @@ return {
         "lua_ls",
         "rust_analyzer",
         "clangd",
-        "tailwindcss",
+        "clang-format",
+        "ts_ls",
+        "gopls"
       },
       handlers = {
         function(server_name) -- default handler (optional)
